@@ -50,6 +50,8 @@ func (v *Validator) Validate(ctx context.Context, req *wspb.ValidationRequest) (
 	case wspb.ValidationRequest_STU3:
 		version = fhirversion.STU3
 	}
+
+	
 	unMar, err := jsonformat.NewUnmarshaller("UTC", version)
 
 	inSrc := req.GetInput()
